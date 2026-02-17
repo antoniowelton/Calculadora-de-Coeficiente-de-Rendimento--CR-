@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+/* --- 1. Reset e Configurações Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho dos elementos */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5; /* Cinza claro suave para não cansar a vista */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- 2. Container Principal --- */
+.container {
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px; /* Limite de largura para telas grandes */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* --- 3. Linhas de Disciplina (Mobile First) --- */
+.linha-disciplina {
+    display: flex;
+    flex-direction: column; /* No celular, os campos ficam um abaixo do outro */
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3498db; /* Cor azul ao clicar no campo */
+}
+
+/* --- 4. Botões e Controles --- */
+.controles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+#btn-adicionar {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+#btn-calcular {
+    background-color: #2ecc71; /* Verde para "ação positiva" */
+    color: white;
+    font-size: 1.1rem;
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* --- 5. Resultado --- */
+#resultado-container {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+#valor-cr {
+    color: #27ae60;
+    font-size: 2rem;
+    display: block;
+}
+
+/* --- 6. Media Query (Para Tablets e Desktops) --- */
+@media (min-width: 480px) {
+    .linha-disciplina {
+        flex-direction: row; /* Em telas maiores, os campos ficam lado a lado */
+        align-items: center;
+    }
+
+    .nome { flex: 3; } /* O nome da matéria ocupa mais espaço */
+    .nota { flex: 1; }
+    .peso { flex: 1; }
+
+    .controles {
+        flex-direction: row; /* Botões lado a lado no PC */
+    }
+
+    button {
+        flex: 1;
+    }
+}
