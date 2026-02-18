@@ -120,6 +120,17 @@ button:active {
     display: block;
 }
 
+#btn-limpar {
+    background-color: #4b9cb0; /* Cor cinza neutra */
+    color: white;
+    font-size: 1rem;
+    
+}
+
+#btn-limpar:hover {
+    background-color: #7f8c8d;
+}
+
 /* --- 6. Media Query (Para Tablets e Desktops) --- */
 @media (min-width: 480px) {
     .linha-disciplina {
