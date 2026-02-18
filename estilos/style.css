@@ -12,8 +12,9 @@ body {
     background-color: #f0f2f5; /* Cinza claro suave para não cansar a vista */
     color: #333;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
     padding: 20px;
 }
@@ -120,16 +121,28 @@ button:active {
     display: block;
 }
 
-#btn-limpar {
-    background-color: #4b9cb0; /* Cor cinza neutra */
-    color: white;
-    font-size: 1rem;
-    
+#btn-clear { /* Div que sustenta o botão LIMPAR" */
+    background-color: #125677;
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn-limpar{ /*Botão que faz o reset e 'Limpa Tudo'*/
+    background-color: #008585; 
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem; 
+    max-width: 180px; 
+    text-shadow: 1px 1px 2px #000000;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.392); 
 }
 
 #btn-limpar:hover {
-    background-color: #7f8c8d;
+    background-color: #e7960a;
 }
+
 
 /* --- 6. Media Query (Para Tablets e Desktops) --- */
 @media (min-width: 480px) {
@@ -167,4 +180,45 @@ button:active {
 .btn-remover:hover {
     background-color: #d63031;
 }
+}
+
+
+/* --- 7. Footer  -  Rodapé --- */
+
+.footer-principal {
+    width: 100%;
+    background-color: #2c3e50; /* Tom escuro elegante */
+    color: #ecf0f1;
+    padding: 2rem 1rem;
+    margin-top: auto; /* Afasta o rodapé do conteúdo principal */
+    margin-bottom: 0px;    
+    text-align: center;
+    border-radius: 12px;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.social-links {
+    margin: 15px 0;
+}
+
+.social-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #2ecc71; /* Muda para verde ao passar o mouse */
+}
+
+.nota-rodape {
+    font-size: 0.75rem;
+    color: #bdc3c7;
+    margin-top: 10px;
 }

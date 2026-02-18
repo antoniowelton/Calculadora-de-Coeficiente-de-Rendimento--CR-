@@ -1,5 +1,10 @@
 
+
+// FUNÇÃO QUE LÊ AS INFORMAÇÕES DO FORMULÁRIO
+
+
 // 1. Selecionamos os elementos que vamos manipular
+
 const btnAdicionar = document.getElementById('btn-adicionar');
 const containerFormulario = document.getElementById('formulario-notas');
 
@@ -34,7 +39,9 @@ btnAdicionar.addEventListener('click', adicionarLinha);
 
 
 
-// ********************************************************************************
+// ******************************************************************************************************************************************************
+
+// FUNÇÃO QUE FAZ OS CÁLCULOS MATEMÁTICOS USANDO A FÓRMULA DO COEFICIENTE DE RENDIMENTO (CR)
 
 // 1. Selecionamos o botão de calcular e o local onde o resultado aparecerá
 const btnCalcular = document.getElementById('btn-calcular');
@@ -83,3 +90,33 @@ function calcularCR() {
 
 // 5. Ouvinte de Evento para o botão calcular
 btnCalcular.addEventListener('click', calcularCR);
+
+//******************************************************************************************************************************************************
+
+// FUNÇÃO QUE FAZ O RESET NOS CAMPOS DE DIGITAÇÃO
+
+const btnLimpar = document.getElementById('btn-limpar');
+
+function limparFormulario() {
+    // 1. Limpa o valor do resultado na tela
+    displayCR.innerText = "0.00";
+    displayCR.style.color = "#27ae60";
+
+    // 2. Seleciona todas as linhas de disciplina
+    const linhas = document.querySelectorAll('.linha-disciplina');
+
+    // 3. Percorre as linhas
+    linhas.forEach((linha, index) => {
+        if (index === 0) {
+            // Na primeira linha, apenas limpamos os campos de texto
+            const inputs = linha.querySelectorAll('input');
+            inputs.forEach(input => input.value = "");
+        } else {
+            // As outras linhas criadas dinamicamente nós removemos completamente
+            linha.remove();
+        }
+    });
+}
+
+// Ouvinte de evento para o botão limpar
+btnLimpar.addEventListener('click', limparFormulario);

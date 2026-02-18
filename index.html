@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de CR (Coeficiente de Rendimento)</title>
     <link rel="stylesheet" href="estilos/style.css"> <!-- Linha de código do CSS3-->
+    <link rel="shortcut icon" href="icones/favicon.ico" type="image/x-icon">
 </head>
 <body>
     
@@ -32,9 +33,24 @@
         <section id="resultado-container">
             <h2>Resultado: <span id="valor-cr">0.00</span></h2>
         </section>
-        <button id="btn-limpar" type="button">Limpar Tudo</button> 
+
+        <div id="btn-clear">
+            <button id="btn-limpar" type="button">Limpar Tudo</button> <!-- Botão que faz o reset e 'Limpa Tudo'-->            
+        </div>
+        
     </main>
     
+    <footer class="footer-principal">
+        <div class="footer-content">
+            <p>&copy; 2026 - Desenvolvido por <strong>Seu Nome</strong></p>
+            <div class="social-links">
+                <a href="https://github.com/seu-usuario" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/seu-perfil" target="_blank">LinkedIn</a>
+            </div>
+            <p class="nota-rodape">Nota: O cálculo é uma média ponderada baseada na carga horária.</p>
+        </div>
+    </footer>
+
 
     <script src="src/index.js"></script> <!-- Linha de código do JAVASCRIPT-->
 
