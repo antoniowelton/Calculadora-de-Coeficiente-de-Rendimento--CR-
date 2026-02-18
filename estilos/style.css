@@ -20,25 +20,28 @@ body {
 
 /* --- 2. Container Principal --- */
 .container {
-    background-color: #fff;
+    background-color: #125677;/* Muda a cor do container principal (AZUL) */
     width: 100%;
     max-width: 600px; /* Limite de largura para telas grandes */
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.366); /* Sombra suave para dar profundidade */
 }
 
 h1 {
-    color: #2c3e50;
-    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px #000000;
+    font-size: 1.7rem;
     margin-bottom: 0.5rem;
     text-align: center;
 }
 
+
 p {
     text-align: center;
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 5px #000000;
+    color: #ff8001c7;
     margin-bottom: 2rem;
 }
 
@@ -82,14 +85,16 @@ button {
 }
 
 #btn-adicionar {
-    background-color: #ecf0f1;
+    background-color: #ecf0f1;/* Cor de fundo do Botão "ADICIONAR DISCIPLINA" */
     color: #2c3e50;
+    font-size: 1.1rem;
 }
 
 #btn-calcular {
     background-color: #2ecc71; /* Verde para "ação positiva" */
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 5px #000000;
 }
 
 button:active {
@@ -101,8 +106,12 @@ button:active {
     margin-top: 2rem;
     text-align: center;
     padding: 1.5rem;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     border-radius: 8px;
+}
+
+#resultado-container > h2 {
+    color: #3d4440;
 }
 
 #valor-cr {
@@ -129,4 +138,22 @@ button:active {
     button {
         flex: 1;
     }
+
+    .btn-remover {
+    background-color: #ff7675;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-remover:hover {
+    background-color: #d63031;
+}
 }
